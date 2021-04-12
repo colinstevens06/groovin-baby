@@ -4,122 +4,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS  -->
+  <title>Groove Commerce</title>
+  
+  <!-- Importing stylesheet -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- JS Libraries & Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./index.js"></script>
-
-  <title>Groove Dashboard</title>
+  <!-- Importing my JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+  
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <div class="nav-container">groove</div>
 
-  <!-- BODY CONTAINER -->
-  <div class="body-container">
-
-    <!-- HUBSHOT.LY HEADER -->
-    <div class="hub-header-container">
-      <div class="hub-header">HubShop.ly</div>
-      <div class="grey-line"></div>
+  <nav class="nav-container">
+    <img src="./images/Logo.png" alt="Groove Logo">
+  </nav>
+  <section class="main-content-container">
+    <div class="hubshoply-container">
+      <h1 class="hubshoply-heading">HubShop.ly</h1>
+      <div class="hubshoply-line"></div>
     </div>
+    <!-- 3 ACROSS WIDGET -->
+    <div class="row widget-row">
+      <div class="col-4">
+        <div class="card blue-bg">
+          <div class="card-header">
+            <h2>Integration Status</h2>
+            <div class="card-header-underline"></div>
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-6 integration-item">
+                <div class="label">Hub ID</div>
+                <div class="checkmark"></div>
+                <div class="status-value">6300907</div>
+              </div>
 
-    <!-- 3-CARD WIDGET -->
-    <div class="card-container">
-      <div class="card blue-bg">
-        <div class="card-header">Integration Status</div>
-        <div class="card-content card-two-data-points">
-          <div class="card-content__two-data-points">
-            <div class="card-content__two-data-points__header">HUB ID</div>
-            <div class="card-content__two-data-points__data">6300907</div>
+              <div class="col-6 integration-item">
+                <div class="label">JavaScript</div>
+                <div class="checkmark"></div>
+                <div class="status-value">Installed</div>
+              </div>
+            </div>
+
+          </div>            
+        </div>
+      </div>
+
+
+      <div class="col-4">
+        <div class="card orange-bg">
+          <div class="card-header">
+            <h2>Total Orders</h2>
+            <div class="card-header-underline"></div>
+          </div>          
+          <div class="card-content">
+            <div class="full-width-value">2,019</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card orange-bg">
+          <div class="card-header">
+            <h2>Total Customers</h2>
+            <div class="card-header-underline"></div>
+          </div>
+          <div class="card-content">
+            <div class="full-width-value">415</div>
 
           </div>
-          <div class="card-content__two-data-points">
-            <div class="card-content__two-data-points__header">JAVASCRIPT<span id="hub-id-confirm"></span></div>
-            <div class="card-content__two-data-points__data">INSTALLED</div>
-          </div>
         </div>
       </div>
-      <div class="card orange-bg">
-        <div class="card-header">Total Order</div>
-        <div class="card-content">
-          <div class="card-content__single-number">2,019</div>
-        </div>
-        
-      </div>
-      <div class="card orange-bg">
-        <div class="card-header">Total Customers</div>
-        <div class="card-content">
-          <div class="card-content__single-number">415</div>
-
-        </div>
-      </div>
-
     </div>
-
     <!-- TABBED CONTENT -->
-    <div class="tabs-container">
+    <div class="row tabbed-row">
       <ul class="tabs">
-        <li class="tab-link" data-tab="tab-1">Installation</li>
-        <li class="tab-link current" data-tab="tab-2">Deals</li>
-        <li class="tab-link" data-tab="tab-3">Billing</li>
-        <li class="tab-link" data-tab="tab-4">Resources</li>
+        <li class="tab-link" data-tab="tab-1"><img src="./images/Icon.png" alt="Installation"> Installation</li>
+        <li class="tab-link current" data-tab="tab-2"><img src="./images/Icon-1.png" alt="Deals"> Deals</li>
+        <li class="tab-link" data-tab="tab-3"><img src="./images/Icon-2.png" alt="Billing"> Billing</li>
+        <li class="tab-link" data-tab="tab-4"><img src="./images/Icon-3.png" alt="Resources"> Resources</li>
       </ul>
     
       <div id="tab-1" class="tab-content">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </div>
       <div id="tab-2" class="tab-content current">
-        <div class="tab-2-content-container">
-          <div class="tab-2_column">
-            <div class="tab-2_column-header">Sync Orders as Deals</div>
-            <div class="tab-2_column-copy">Leverage the HubSpot CRM by seeing each individual order as a 'Closed Won Deal' and then report on Revenue using the HubSpot Reporting Add On.</div>
-            <div class="tab-2_column-selection">
-              <input type="radio" id="yes" name="yes" value="YES">YES</input>
-              <input type="radio" id="no" name="no" value="NO">NO</input>
-
-            </div>
-          </div>
-          <div class="tab-2_column">
-            <div class="tab-2_column-header">Completed Order Deal Status</div>
-            <div class="tab-2_column-copy">Assign a deal status to completed orders. ‘Closed Won’ is a typical choice.</div>
-            <div class="tab-2_column-selection">
-              <button id="dropdown-1" class="dropdown">Appointment Scheduled <span class="caret">&#9660;</span></button>
-              <div id="dropdown-1-options" class="dropdown-1-options">
-                <div>Option 1</div>
-                <div>Option 2</div>
-                <div>Option 3</div>
-                <div>Option 4</div>
-              </div>
-            </div>
-          </div>
-          <div class="tab-2_column">
-            <div class="tab-2_column-header">Refunded Order Deal Status</div>
-            <div class="tab-2_column-copy">Assign a deal status to refunded orders. ‘Closed Lost’ is a typical choice.</div>
-            <div class="tab-2_column-selection">
-              <button id="dropdown-2" class="dropdown">
-                Appointment Scheduled <span class="caret">&#9660;</span>
-              </button>
-
-              <div id="dropdown-2-options" class="dropdown-2-options">
-                <div>Option 1</div>
-                <div>Option 2</div>
-                <div>Option 3</div>
-                <div>Option 4</div>
-              </div>
-            </div>
-          </div>
-        </div> 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
       <div id="tab-3" class="tab-content">
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -127,10 +100,10 @@
       <div id="tab-4" class="tab-content">
         Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </div>
+
     </div>
-  </div>
 
-
-
+  </section>
+  
 </body>
 </html>

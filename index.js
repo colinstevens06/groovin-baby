@@ -10,13 +10,4 @@ $(document).ready(function () {
     $("#" + tab_id).addClass('current');
   })
 
-
-  $("#dropdown-1").on("click", function () {
-    $("#dropdown-1-options").fadeToggle()
-  })
-
-  $("#dropdown-2").on("click", function () {
-    $("#dropdown-2-options").fadeToggle()
-  })
-
 })
