@@ -1,13 +1,19 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+
+:root {
+  --radio-color: #8A3FEE;
 }
 
 html, body {
   min-height: 100vh;
   background: linear-gradient(180deg, #FFFFFF 0%, #FBF9FF 100%);
   font-family: 'Poppins', sans-serif;
+  padding-bottom: 25px;
 }
 
 /* UNIVERSAL */
@@ -281,11 +287,13 @@ ul.tabs li.current::after {
   display: grid;
   grid-template-columns: 32% 32% 32%;
   column-gap: 1.5%;
+  margin-top: 15px;
 }
 
 .deals-card {
   display: grid;
   grid-template-rows: 2rem auto auto;
+  row-gap: 1em;
   min-height: 160px;
 }
 
@@ -295,9 +303,7 @@ ul.tabs li.current::after {
   font-size: 1.25rem;
   line-height: 100%;
   /* identical to box height, or 24px */
-  
   letter-spacing: -0.025em;
-  
   color: #000000;
   
 }
@@ -311,27 +317,58 @@ ul.tabs li.current::after {
 
 }
 
-input.radio {
-  border: 2px solid #8A3FEE;
-  box-sizing: border-box;
-  border-radius: 40px;
+.deals-card-selector form {
+  display: grid;
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+  column-gap: 10px;
 }
 
-label.radio {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 100%;
-  /* identical to box height, or 14px */
-
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: #786D87;
-
+.radio {
+  font-size: 2.25rem;
+  color: var(--radio-color);
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 0.5em;
 }
 
+.radio__input {
+  display: flex;
+}
 
+.radio__input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
+/* .radio__input input:checked + .radio__control {
+  background: radial-gradient(currentColor 50%, rgba(255, 0, 0, 0.0) 51%);
+} */
 
+.radio__control {
+  display: grid;
+  place-items: center;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+}
+
+input + .radio__control::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: inset 0.5em 0.5em currentColor;
+  border-radius: 50%;
+  transition: 180ms transform ease-in-out;
+  transform: scale(0);
+}
+
+input:checked + .radio__control::before {
+  transform: scale(1);
+}
+
+.radio__label {
+  line-height: 1;
+}
 
