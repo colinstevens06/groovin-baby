@@ -370,5 +370,61 @@ input:checked + .radio__control::before {
 
 .radio__label {
   line-height: 1;
+  align-self: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  /* identical to box height, or 14px */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #786D87;
 }
 
+.deals__dropdown-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.deals__dropdown-list-btn {
+  width: 100%;
+  display: flex;
+  border: 2px solid #8A3FEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 13px 16px;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.deals__dropdown-btn-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  color: #000000;
+}
+
+.img-down-arrow {
+  align-self: center;
+  margin-left: auto;
+
+}
+
+.deals__dropdown-options {
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 8px 12px;
+
+}
+
+.deals__dropdown-options ul {
+  list-style: none;
+
+}
